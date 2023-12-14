@@ -20,9 +20,7 @@ use App\Http\Controllers\InvoiceController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->middleware(['auth:sanctum', 'verified'])->name('welcome');
+
 
 Route::get('/welcome', function () {
     return view('welcome');
@@ -50,3 +48,5 @@ Route::resource('warehouses', WarehouseController::class);
 Route::resource('providers', ProviderController::class);
 Route::resource('entries', HeadEntryController::class);
 Route::resource('invoices', InvoiceController::class);
+
+Route::get('table', [UserController::class,'viewTable']);

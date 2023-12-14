@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Product;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -55,5 +57,13 @@ class UserController extends Controller
     public function show($id){
         $users = User::find($id);
         return view('users.show',compact('users'));
+    }
+
+    public function viewTable(){
+        //dd('ACA', Auth::user()->FirstName);
+        $products = Product::all();
+        $user = Auth::user();
+       // dd($products);
+        return view('test.table', compact( 'products','user'));
     }
 }
