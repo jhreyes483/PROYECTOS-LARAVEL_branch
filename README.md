@@ -24,17 +24,16 @@
 - php artisan serve
 
 ### 4. Nombre inicial DB
-- tienda_online
+- s_laravel_ciclosoft
 - MySQL
 
 ### 5. Host
 - http://127.0.0.1:8000/
 
 # intalacion
-composer i
-npm i 
-php artisan passport:install
-php artisan key:generate
-php artisan optimice
-
-php artisan db:seed
+- composer i
+- npm i 
+- php artisan passport:install
+- php artisan key:generate
+- php artisan optimice
+- php artisan db:seed
