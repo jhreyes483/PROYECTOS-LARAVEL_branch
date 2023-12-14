@@ -18,11 +18,11 @@ class Carrito extends Model
 
     public function usuario(){
 
-        return $this->belongsTo(Usuario::class,'usuario_id');
+        return $this->belongsTo(Usuario::class,'usuario_id'); // Relacion de uno a muchos inversa (muchos a uno)
     }
 
     public function producto(){
-        return $this->belongsTo(Producto::class,'producto_id');
+        return $this->belongsTo(Producto::class,'producto_id'); // Relacion de uno a muchos inversa (muchos a uno)
     }
 
     
