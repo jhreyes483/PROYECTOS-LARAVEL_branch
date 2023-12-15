@@ -1,0 +1,19 @@
+.contenedor {
+    width:1000px;
+    height:400px;
+    margin: 50px auto;
+    padding: 10px;
+    overflow: auto;
+}
+
+/* Scroll Personalizado */
+
+.contenedor::-webkit-scrollbar {
+    width: 7px;
+}
+
+.contenedor::-webkit-scrollbar-thumb {
+    background: #0000009d;
+    border-radius: 15px;
+}
+
