@@ -39,8 +39,6 @@ class LoginController extends Controller
         return redirect()->route('login.form_login');
     }
 
-
-
     public function test()
     {
 
@@ -110,7 +108,7 @@ class LoginController extends Controller
         dump(['q4' => $result->toArray()]);
 
         //DB::enableQueryLog();
-        $result = Instructor::with('fichas')->where('id_instructor',3)
+        $result = Instructor::with('fichas')->where('id_instructor', 3)
             ->get();
         dump(['q5d' => $result->toArray()]);
         //dd(DB::getQueryLog());
@@ -133,11 +131,11 @@ class LoginController extends Controller
         $resultados  = Jornada::with('fichas.aprendices', 'fichas.programa', 'fichas.instructores')
             ->find($jornadaId);
 
-       // DB::enableQueryLog();
+        // DB::enableQueryLog();
         $resultados = Jornada::with('fichas.aprendices', 'fichas.programa', 'fichas.instructores')
             ->where('id', $jornadaId)
             ->first();
-       // dd(DB::getQueryLog());
+        // dd(DB::getQueryLog());
 
         dd('test', $resultados->toArray(),);
     }

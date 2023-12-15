@@ -35,7 +35,7 @@
                                 <td>{{ $gen[ $aprendiz->genero ] }}</td>
                                 <td>{{ $doc[ $aprendiz->tipoDoc ] }}</td>
                                 <td>{{ $aprendiz->id_aprendiz }}</td>
-                                <td>{{ $aprendiz->fichas['No_ficha']}}</td>
+                                <td>{{ $aprendiz->ficha->No_ficha }}</td>
                                 <td>{{ $aprendiz->created_at }}</td>
                                 <td>  <img width="100" src="img/user/{{ $aprendiz->foto }}" alt=""> </td>
                                 <td>

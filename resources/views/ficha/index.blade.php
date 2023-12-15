@@ -106,8 +106,8 @@
                                             <td>{{ $ficha->No_ficha }}</td>
                                             <td>{{ $ficha->descrip }}</td>
                                             <td>{{ $est[$ficha->estado] }}</td>
-                                            <td>{{ $ficha->jornada['nom_jornada'] }}</td>
-                                            <td>{{ $ficha->programa['nomProg'] }}</td>
+                                            <td>{{ $ficha->jornada->nom_jornada }}</td>
+                                            <td>{{ $ficha->programa->nomProg  }}</td>
                                             <td>
                                                 <form action="" method="post">
                                                     <a href="{{ route('ficha.confirm',$ficha->id_ficha) }}" class="btn btn-sm btn-success" title="Actualizar estado"><i class="fas fa-clipboard-list"></i></a>
