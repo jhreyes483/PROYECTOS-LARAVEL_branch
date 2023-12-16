@@ -23,6 +23,7 @@ mix.js('resources/js/app.js', 'public/js')
         'resources/template/css/AdminLTE.min.css',
         'resources/template/css/_all-skins.min.css',
         'resources/template/css/estilos.css',
+        'node_modules/sweetalert2/dist/sweetalert2.min.css'
     ], 'public/css/app.css')
     
         .scripts([
@@ -33,4 +34,5 @@ mix.js('resources/js/app.js', 'public/js')
             'resources/template/js/fastclick.js',
             'resources/template/js/adminlte.min.js',
             'resources/template/js/demo.js',
+            'node_modules/sweetalert2/dist/sweetalert2.min.js'
         ], 'public/js/app.js');

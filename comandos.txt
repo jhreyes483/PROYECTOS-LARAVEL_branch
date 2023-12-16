@@ -4,3 +4,12 @@ instalacion por npm de libreria e incluir el scrips el laravel mix
 npm install axios
 incluir en los scrips de webpack.mix.js 
 node_modules/axios/dist/axios.min.js
+
+/*********************/
+segunda forma de instalar libreria por npm y laravel mix "Switalert2"
+npm install sweetalert2
+incluir en los scrips de webpack.mix.js 
+node_modules/axios/dist/axios.min.js
+
+y en la vista principal app.blade 
+<script src="{{asset('js/app.js')}}"></script>
