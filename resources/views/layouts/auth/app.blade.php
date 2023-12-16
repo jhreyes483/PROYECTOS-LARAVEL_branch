@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 2 | ChartJS</title>
+    <title>Laravel ficha</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" href="{{url('css/app.css')}}">
@@ -23,9 +23,16 @@
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 
-
-
-
+    @if(session('status'))
+    <script src="{{ asset('js/libs/sweetalert2.js') }}" ></script>
+    <script>
+        Swal.fire({
+            title: '{{ session('response') }}',
+            icon: '{{ session('status') }}',
+            confirmButtonText: 'Ok'
+          })
+    </script>
+    @endif
 
 
 

@@ -54,8 +54,8 @@ class AdminController extends Controller
         // TRUE = DELETE FROM ENTIDAD WHERE ID = ?
         Admin::find($id_admin)->delete();
         return redirect()->route('admin.index')->with([
-            'message'=>'se ha eliminado correctamente',
-            'type'=>'warning'
+            'response' => 'Se ha eliminado el usuario',
+            'status' => 'success', // o error
         ]);
     } 
 

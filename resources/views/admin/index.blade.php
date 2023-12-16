@@ -13,7 +13,7 @@
                     <table class="table table-striped">
                         <thead class="table-dark">
                         <tr>
-                            <th>No Documento</th>
+                            <th>No Documento.</th>
                             <th>Nombres</th>
                             <th>Apellidos</th>
                             <th>genero</th>
@@ -32,11 +32,11 @@
                                 <td>{{ $doc[ $usuario->tipoDoc ] }}</td>
                                 <td>{{ $usuario->created_at }}</td>
                                 <td>
-                                    <form action="{{ route('admin.destroy',$usuario->id_admin) }}" method="post">
+                                    <form id="formOptions" action="{{ route('admin.destroy', $usuario->id_admin) }}" method="post">
                                         @csrf
                                         @method('DELETE')
                                         <a href="{{ route('admin.edit',$usuario->id_admin) }}" class="btn btn-sm btn-warning" title="Editar"><i class="fas fa-eye-dropper"></i></a>
-                                        <button type="submit" class="btn btn-sm btn-danger" title="Eliminar"><i class="fas fa-trash-alt"></i></button>
+                                        <button  class="btn btn-sm btn-danger" type="button" onclick="confirmDelte()" title="Eliminar"><i class="fas fa-trash-alt"></i></button>
                                         <a href="{{ route('admin.show',$usuario->id_admin) }}" class="btn btn-sm btn-info"title="Detalle" ><i class="far fa-eye"></i></a>
                                     </form>
                                 </td>
@@ -48,6 +48,32 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function confirmDelte(){
+            Swal.fire({
+            title: 'estas seguro de eliminar usuario ?',
+            text: "Este cambio es permanente!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si eliminar'
+            }).then((result) => {
+                document.getElementById('formOptions').submit();
+                /*
+                if (result.isConfirmed) {
+                    Swal.fire(
+                    'Eliminado',
+                    'haz eliminado el usuario',
+                    'success'
+                    )
+                }
+                */
+            })
+
+        }
+    </script>
 
 
 @endsection

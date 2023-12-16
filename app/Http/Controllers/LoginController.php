@@ -24,7 +24,10 @@ class LoginController extends Controller
                 session(['USER' => $user]);
                 return redirect()->route('dashboard.index');
             } else {
-                return redirect()->route('login.form_login');
+                return redirect()->route('login.form_login')->with([ 
+                    'response' => 'Credenciales incorrectas',
+                    'status' => 'error' // o error
+            ]);
             }
         } else {
             return redirect()->route('login.form_login');
