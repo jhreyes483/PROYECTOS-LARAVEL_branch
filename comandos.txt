@@ -1,2 +1,6 @@
 
 Se implementa alert de confirmacion
+instalacion por npm de libreria e incluir el scrips el laravel mix
+npm install axios
+incluir en los scrips de webpack.mix.js 
+node_modules/axios/dist/axios.min.js

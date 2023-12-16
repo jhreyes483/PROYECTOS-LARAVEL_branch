@@ -26,6 +26,7 @@ mix.js('resources/js/app.js', 'public/js')
     ], 'public/css/app.css')
     
         .scripts([
+            'node_modules/axios/dist/axios.min.js',
             'resources/template/js/jquery.min.js',
             'resources/template/js/bootstrap.min.js',
             'resources/template/js/Chart.js',
